@@ -33,10 +33,10 @@ def downstatus(statusfile,message):
 		with open(statusfile,"r") as downread:
 			txt = downread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"__Downloaded__ : **{txt}**")
-			time.sleep(10)
-		except:
+			bot.edit_message_text(message.chat.id, message.id, f"__Downloaded by rajsa__ : **{txt}**")
 			time.sleep(5)
+		except:
+			time.sleep(2)
 
 
 # upload status
@@ -50,10 +50,10 @@ def upstatus(statusfile,message):
 		with open(statusfile,"r") as upread:
 			txt = upread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"__Uploaded__ : **{txt}**")
-			time.sleep(10)
-		except:
+			bot.edit_message_text(message.chat.id, message.id, f"__Uploaded by rajsa__ : **{txt}**")
 			time.sleep(5)
+		except:
+			time.sleep(2)
 
 
 # progress writter
@@ -74,7 +74,7 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 	print(message.text)
 
 	# joining chats
-	if "https://t.me/+" in message.text or "https://t.me/joinchat/" in message.text:
+	if "https://t.me/+" in message.text or "https://t.me/AnurajRajsa/" in message.text:
 
 		if acc is None:
 			bot.send_message(message.chat.id,f"**String Session is not Set**", reply_to_message_id=message.id)
@@ -126,7 +126,7 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 
 			# public
 			else:
-				username = datas[3]
+				username = Rajsa[3]
 
 				try: msg  = bot.get_messages(username,msgid)
 				except UsernameNotOccupied: 
@@ -274,7 +274,7 @@ https://t.me/xxxx/1001-1010
 https://t.me/c/xxxx/101 - 120
 ```
 
-**__note that space in between doesn't matter__**
+**__note that space in between doesn't matter by rajsa__**
 """
 
 
